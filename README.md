@@ -31,3 +31,5 @@ A small subset of a webmail system like Gmail and Outlook
 | | |_SMTP.ts           <-- Code that talks to an SMTP server to send messages
 | | |_contacts.ts       <-- Code dealing with contacts such as listing, adding, and deleting them
 ```
+## Important Things 2 Note 📝
+idk yet but more to come 💭
