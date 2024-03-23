@@ -13,3 +13,21 @@ A small subset of a webmail system like Gmail and Outlook
 - The "male-goods" client:
   - It's the client... it displays stuff and allows for interactions
   - Need I say more?
+
+## Source File Rundown
+
+```
+|-client
+| |-dist
+| |-src
+| | |_TBD
+|
+|-server                <-- The server codebase
+| |-dist                <-- compiled distro
+| |-src                 <-- THE SOURCE OF ALL EVIL
+| | |_main.ts           <-- Main entry point; Functions that constitute the API the server presents to the client go here
+| | |_ServerInfo.ts     <-- Config file that provides details about the IMAP & SMTP server(s) that this project will connect to and where the info will be stored
+| | |_IMAP.ts           <-- Code that talks to an IMAP server to list mailboxes & messages as well as the retrieval of messages
+| | |_SMTP.ts           <-- Code that talks to an SMTP server to send messages
+| | |_contacts.ts       <-- Code dealing with contacts such as listing, adding, and deleting them
+```
