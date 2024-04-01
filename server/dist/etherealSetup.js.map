@@ -1,0 +1,1 @@
+{"version":3,"file":"etherealSetup.js","sourceRoot":"","sources":["../src/etherealSetup.ts"],"names":[],"mappings":";;;;;;;;;;;;;;AAAA,4DAAmC;AAEnC,SAAe,aAAa;;QAC1B,IAAI,WAAW,GAAG,MAAM,oBAAU,CAAC,iBAAiB,EAAE,CAAA;QACtD,OAAO,CAAC,GAAG,CAAC,WAAW,CAAC,CAAA;IAC1B,CAAC;CAAA;AAED,aAAa,EAAE,CAAC,KAAK,CAAC,OAAO,CAAC,KAAK,CAAC,CAAA"}

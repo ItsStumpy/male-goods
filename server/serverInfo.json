@@ -1,15 +1,30 @@
-﻿{
+{
   "smtp": {
-    "host": "mail.mydomain.com", "port": 999,
+    "host": "smtp.ethereal.email",
+    "port": 587,
+    "secure": false,
     "auth": {
-      "user": "user@domain.com", "pass": "xxx"
+      "user": "quwfmy2wfjx3dygb@ethereal.email",
+      "pass": "BV1DvZ7EnqvXhZ6nqy"
     }
   },
   "imap": {
-    "host": "mail.mydomain.com", "port": 999,
+    "host": "imap.ethereal.email",
+    "port": 993,
+    "secure": true,
     "auth": {
-      "user": "user@domain.com",
-      "pass": "xxx"
+      "user": "quwfmy2wfjx3dygb@ethereal.email",
+      "pass": "BV1DvZ7EnqvXhZ6nqy"
     }
-  }
+  },
+  "pop3": {
+    "host": "pop3.ethereal.email",
+    "port": 995,
+    "secure": true,
+    "auth": {
+      "user": "quwfmy2wfjx3dygb@ethereal.email",
+      "pass": "BV1DvZ7EnqvXhZ6nqy"
+    }
+  },
+  "web": "https://ethereal.email"
 }
