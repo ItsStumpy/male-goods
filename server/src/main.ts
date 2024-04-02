@@ -12,7 +12,7 @@ app.use('/', express.static(path.join(__dirname, '../../client/dis')))
 
 app.use(function(req: Request, res: Response, next: NextFunction) {
   res.header('Access-Control-Allow-Origin', '*')
-  res.header('Access-Control-Allow-Methods', 'GET, POST, DELETE, OPTIONS')
+  res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS')
   res.header('Access-Control-Allow-Headers', 'Origin,X-Requested-With,Content-Type,Accept')
   next()
 })
@@ -82,6 +82,17 @@ app.post('/contacts', async (req: Request, res: Response) => {
     const contactsWorker: Contacts.Worker = new Contacts.Worker()
     const contact: IContact = await contactsWorker.addContact(req.body)
     res.json(contact)
+  } catch (error) {
+    res.send('error')
+  }
+})
+
+app.put('/contacts/:id', async (req: Request, res: Response) => {
+  try {
+    const contactsWorker: Contacts.Worker = new Contacts.Worker()
+    const updatedContactData: Partial<IContact> = req.body
+    await contactsWorker.updateContact(req.params.id, updatedContactData)
+    res.send('ok')
   } catch (error) {
     res.send('error')
   }

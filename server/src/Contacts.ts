@@ -44,16 +44,28 @@ export class Worker {
     })
   }
 
-  // Delete a contact
-  public deleteContact(inID: string): Promise<string> {
+  public updateContact(inID: string, inNewData: Partial<IContact>): Promise<string> {
     return new Promise((inResolve, inReject) => {
-      this.db.remove({ _id: inID }, {}), (inError: Error | null, inNumRemoved: number) => {
+      this.db.update({ _id: inID }, { $set: inNewData }, {}, (inError: Error | null, inNumUpdated: number) => {
         if (inError) {
           inReject(inError)
         } else {
           inResolve('')
         }
-      }
+      })
+    })
+  }
+
+  // Delete a contact
+  public deleteContact(inID: string): Promise<string> {
+    return new Promise((inResolve, inReject) => {
+      this.db.remove({ _id: inID }, {}, (inError: Error | null, inNumRemoved: number) => {
+        if (inError) {
+          inReject(inError)
+        } else {
+          inResolve('')
+        }
+      })
     })
   }
 }
