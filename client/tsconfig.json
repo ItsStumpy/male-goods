@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "sourceMap": true,
+    "noImplicitAny": false,
+    "module": "CommonJS",
+    "target": "ES6",
+    "lib": [
+      "ES2015",
+      "ES2017",
+      "DOM"
+    ],
+    "removeComments": true,
+    "jsx": "react",
+    "allowJs": true,
+    "baseUrl": "./",
+    "paths": {
+      "components/*": [
+        "src/components/*"
+      ]
+    }
+  },
+  "files": [
+    "src/index.ts"
+  ]
+}
